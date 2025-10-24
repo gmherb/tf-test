@@ -94,7 +94,7 @@ variable "user_groups_paths" {
         ]
       ]
     ]))
-    error_message = "YAML file must have keys [${join(", ", local.user_groups_keys_required)}] and optionally [${join(", ", local.user_groups_keys_optional)}]"
+    error_message = "YAML file only supports keys [${join(", ", local.user_groups_keys)}]"
   }
 
   validation {
