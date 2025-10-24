@@ -39,5 +39,5 @@ locals {
 
   user_groups_keys_required = ["name", "users", "roles"]
   user_groups_keys_optional = ["compute_filters", "grant_sa_access"]
-  user_groups_keys = concat(local.user_groups_keys_required, local.user_groups_keys_optional)
+  user_groups_keys          = concat(local.user_groups_keys_required, local.user_groups_keys_optional)
 }

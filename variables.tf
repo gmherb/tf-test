@@ -78,7 +78,7 @@ variable "user_groups_paths" {
     condition = alltrue(flatten([
       for path in var.user_groups_paths : [
         for file in fileset(path, "*.{yaml,yml}") :
-           yamldecode(file("${path}/${file}")) != null
+        yamldecode(file("${path}/${file}")) != null
       ]
     ]...))
     error_message = "YAML file must not be null"
