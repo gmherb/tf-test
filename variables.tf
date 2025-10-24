@@ -58,6 +58,14 @@ variable "user_groups" {
     error_message = "Users must not be empty"
   }
 
+  validation {
+    condition = alltrue(flatten([
+      for user_group in var.user_groups :
+      length(user_group.roles) > 0
+    ]))
+    error_message = "Roles must not be empty"
+  }
+
 }
 
 variable "user_groups_paths" {

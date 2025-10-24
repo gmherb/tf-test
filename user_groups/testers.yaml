@@ -4,3 +4,11 @@
     - timmy
   roles:
     - timmy
+
+- name: testers2
+  users:
+    - alice
+    - bob
+  roles:
+    - testerole
+  grant_sa_access: true
