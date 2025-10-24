@@ -1,0 +1,6 @@
+- name: admins
+  users:
+    - greg@example.com
+  roles: 
+    - admins
+  

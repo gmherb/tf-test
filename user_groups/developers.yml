@@ -1,0 +1,6 @@
+---
+- name: developers
+  users:
+    - dimmy
+  roles:
+    - dimmy
